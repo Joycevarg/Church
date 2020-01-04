@@ -1,3 +1,4 @@
+import 'package:church/search.dart';
 import 'package:church/timings.dart';
 import 'package:church/about.dart';
 import 'package:flutter/material.dart';
@@ -49,6 +50,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   MainOption op=MainOption(Text("Timing",style: TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize: 20),), Image.asset("assets/images/pg1.jpg"),TimingTable());
   MainOption op1=MainOption(Text("About",style: TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize: 20),), Image.asset("assets/images/pg1.jpg"),Aboutpage());
+  MainOption op2=MainOption(Text("About",style: TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize: 20),), Image.asset("assets/images/pg1.jpg"),Searchbar());
 
 
   @override
@@ -74,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               height: MediaQuery.of(context).size.height*0.8,
             child:ListView(
-              children: <Widget>[op1,op,op,op,op,op,op],scrollDirection: Axis.vertical,))],))
+              children: <Widget>[op1,op2,op,op,op,op,op],scrollDirection: Axis.vertical,))],))
       );
 //    );
   }
